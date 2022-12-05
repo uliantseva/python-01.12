@@ -17,7 +17,17 @@ import antigravity
 
 import __hello__
 
-from __future__ import braces
+
+name = 'света'
+print('*\t*\t*\n*\n*\n*\n*\n*\n*\t*\t*\n'*len('*'))
+print('*\t*\t*\n*\t\t*\n*\t*\t*\n*\n*\t*\t*\n*\t\t*\n*\t*\t*\n'*len('*'))
+print('*\t*\t*\n*\n*\n*\t*\t*\n*\n*\n*\t*\t*\t\n'*len('*'))
+print('*\t*\t*\t*\t*\t\n\t\t*\n\t\t*\n\t\t*\n\t\t*\n\t\t*\n'*len('*'))
+print('\t\t\t\t*\n\t\t\t*\t\t*\n\t\t*\t*\t*\t*\t*\n\t*\t\t\t\t\t\t*\n*\t\t\t\t\t\t\t\t*'*len('*'))
+
+
+
+
 
 
 
