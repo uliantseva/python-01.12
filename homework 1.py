@@ -17,7 +17,6 @@ import antigravity
 
 import __hello__
 
-
 name = 'света'
 print('*\t*\t*\n*\n*\n*\n*\n*\n*\t*\t*\n'*len('*'))
 print('*\t*\t*\n*\t\t*\n*\t*\t*\n*\n*\t*\t*\n*\t\t*\n*\t*\t*\n'*len('*'))
