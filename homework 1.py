@@ -13,23 +13,23 @@ print(text)
 text = 'Backsp\bace'
 print(text)
 
-import antigravity
+text = 'import antigravity'
+print(text)
 
-import __hello__
+text = 'import __hello__'
+print(text)
 
-name = 'света'
-print('*\t*\t*\n*\n*\n*\n*\n*\n*\t*\t*\n'*len('*'))
-print('*\t*\t*\n*\t\t*\n*\t*\t*\n*\n*\t*\t*\n*\t\t*\n*\t*\t*\n'*len('*'))
-print('*\t*\t*\n*\n*\n*\t*\t*\n*\n*\n*\t*\t*\t\n'*len('*'))
-print('*\t*\t*\t*\t*\t\n\t\t*\n\t\t*\n\t\t*\n\t\t*\n\t\t*\n'*len('*'))
-print('\t\t\t\t*\n\t\t\t*\t\t*\n\t\t*\t*\t*\t*\t*\n\t*\t\t\t\t\t\t*\n*\t\t\t\t\t\t\t\t*'*len('*'))
+text = 'from __future__ import braces'
+print(text)
 
-
-
-
-
-
-
+text = 'света'
+print('*\t*\t*\t\t*\t*\t*\t*\t*\t*\t\t*\t*\t*\t*\t*\t\t\t\t\t*'*len('*'))
+print('*\t\t\t\t*\t\t*\t*\t\t\t\t\t\t*\t\t\t\t\t\t*\t\t*'*len('*'))
+print('*\t\t\t\t*\t*\t*\t*\t\t\t\t\t\t*\t\t\t\t\t*\t\t\t\t*'*len('*'))
+print('*\t\t\t\t*\t\t\t*\t*\t*\t\t\t\t*\t\t\t\t*\t*\t*\t*\t*\t*\t*'*len('*'))
+print('*\t\t\t\t*\t*\t*\t*\t\t\t\t\t\t*\t\t\t*\t\t\t\t\t\t\t\t*'*len('*'))
+print('*\t\t\t\t*\t\t*\t*\t\t\t\t\t\t*\t\t*\t\t\t\t\t\t\t\t\t\t*'*len('*'))
+print('*\t*\t*\t\t*\t*\t*\t*\t*\t*\t\t\t\t*\t*\t\t\t\t\t\t\t\t\t\t\t\t*'*len('*'))
 
 
 
