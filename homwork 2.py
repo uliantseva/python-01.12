@@ -11,7 +11,7 @@ print(f'количество парт для всех учеников {(class1+
 
 
 
-num1 = int(input('Введите целое число:'))
+num1 = int(input('введите число:'))
 num2 = 0
 while num1 > 0:
   digit = num1 % 10
