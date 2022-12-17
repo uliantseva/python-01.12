@@ -1,1 +1,5 @@
+N = int(input('введите число:'))
+for i in range(50):
+    print( i, end='')
+
 
