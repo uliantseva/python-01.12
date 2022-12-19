@@ -1,15 +1,15 @@
-variable = input('Ввести знак операции:')
 n1 = float(input('Введите число:'))
+symbol = input('Ввести знак операции:')
 n2 = float(input('Введите число:'))
-if variable == '+':
-    print(n1+n2)
-elif variable == '-':
+if symbol == '+':
+    print(n1 + n2)
+elif symbol == '-':
     print(n1 - n2)
-elif variable == '*':
+elif symbol == '*':
     print(n1 * n2)
-elif variable == '/':
+elif symbol == '/':
     print(n1 / n2)
-elif variable == '**':
+elif symbol == '**':
     print(n1 ** n2)
 else:
     print('Не указала знак операции')
@@ -17,10 +17,13 @@ else:
 
 
 
-N = int(input('введите ранг:'))
+N = int(input('Введите ранг:'))
 for i in range(1, int(N**0.5)+1):
     print(i**2, end=' ')
-print()
+
+
+
+
 
 
 
