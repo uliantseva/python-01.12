@@ -5,6 +5,21 @@ while pass_in != password:
     pass_in - input('try again: ')
 else:
     print('Welcome')
+##
+password = '123'
+count_try = 3
+pass_in = input('Input password: ')
+while pass_in != password:
+    count_try -= 1
+    if count_try == 0:
+        print('No Welcome')
+        break
+    print('Wrong password: ')
+    pass_in = input('try again: ')
+else:
+    print('Welcome')
+
+
 
 # получить сумму всех цифр числа
 num = int(input('input number'))
@@ -13,6 +28,7 @@ while num > 0:
     result += num % 10   # result = result + num
     num //= 10   # num = num // 10
 print(result)
+
 
 
 
