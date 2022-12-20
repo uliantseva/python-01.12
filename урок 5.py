@@ -9,8 +9,8 @@ print(result)
 
 
 # цикл в цикле
-sym_in_string=5
-count_of_strings=4
+sym_in_string = 5
+count_of_strings = 4
 for h in range(count_of_strings):
  for w in range(sym_in_string):
     print('*', end=' ')
