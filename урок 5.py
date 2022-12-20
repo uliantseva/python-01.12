@@ -1,3 +1,11 @@
+password = '123'
+pass_in = input('Input password: ')
+while pass_in != password:
+    print('Wrong password: ')
+    pass_in - input('try again: ')
+else:
+    print('Welcome')
+
 # получить сумму всех цифр числа
 num = int(input('input number'))
 result = 0
