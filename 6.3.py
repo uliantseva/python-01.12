@@ -21,5 +21,3 @@ li.sort()
 print('li', li)
 li.sort(reverse=True)   # сортировка в обратном порядке от большего к меньшему
 print('li', li)
-
-
