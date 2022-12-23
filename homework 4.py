@@ -1,28 +1,52 @@
 strings = 7
-for s in range(1, strings+1):
-    for space in range(strings*2 - s*2):
+for s in range(1, strings + 1):
+    for space in range(strings * 2 - s * 2):
         print(end=' ')
-    for star in range(s*2-1):
+    for star in range(s * 2 - 1):
         print('*', end=' ')
     print()
+#
 
-rows = 7
-for i in range(1, rows + 1):
-    for j in range(1, rows - i + 1):
-        print(end =' ')
-    for k in range(1, 2 * i):
-        if k == 1 or k == i * 2 - 1:
+strings = 7
+for s in range(1, strings + 1):
+    for space in range(1, strings - s + 1):
+        print(end='  ')
+    for star in range(1, 2 * s):
+        if star == 1 or star == s * 2 - 1:
             print('*', end=' ')
         else:
-            print(' ', end=' ')
+            print('*', end=' ')
     print()
-for i in range(rows - 1, 0, -1):
-    for j in range(1, rows - i + 1):
+for i in range(strings - 1, 0, -1):
+    for j in range(1, strings - i + 1):
         print(' ', end=' ')
-    for k in range(1, 2 * i):
-        if k == 1 or k == i * 2 - 1:
+    for star in range(1, 2 * i):
+        if star == 1 or star == i * 2 - 1:
             print('*', end=' ')
         else:
             print(' ', end=' ')
     print()
+#
+
+strings = 7
+for s in range(1, strings + 1):
+    for space in range(strings * 2 - s * 2):
+        print(end=' ')
+    for star in range(2 * s - 1):
+        if star == 0 or star == s * 2 - 2:
+            print('*', end=' ')
+        else:
+            if s == strings:
+                print('*', end=' ')
+            else:
+                print(' ', end=' ')
+    print()
+
+#
+
+
+
+
+
+
 
