@@ -2,7 +2,7 @@ password = '123'
 pass_in = input('Input password: ')
 while pass_in != password:
     print('Wrong password: ')
-    pass_in - input('try again: ')
+    pass_in = input('try again: ')
 else:
     print('Welcome')
 ##
@@ -25,7 +25,7 @@ else:
 num = int(input('input number'))
 result = 0
 while num > 0:
-    result += num % 10   # result = result + num
+    result += num % 10   # result = result + num % 10
     num //= 10   # num = num // 10
 print(result)
 
@@ -50,7 +50,7 @@ for h in range(count_of_strings):
      print()
 
 
-olumns=5
+columns=5
 strings=5
 for s in range(strings):
      for c in range(s + 1):
