@@ -61,12 +61,13 @@ for i in range(strings - 1, 0, -1):
             print('*', end=' ')
         else:
             print(' ', end=' ')
-    for k in range(1, strings - 6, 4):
-        print('-', end=' ')
+    else:
+        if i == (strings * 2):
+            print(' ' * strings + '*')
+        else:
+            print(' ' * (i - strings) + '*', end='')
     print()
-
-
-
+#
 
 
 
