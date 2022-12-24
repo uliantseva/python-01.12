@@ -29,6 +29,12 @@ while num > 0:
     num //= 10   # num = num // 10
 print(result)
 
+##
+my_string = '0123456789'
+for desytki in my_string:
+    for edinitsi in my_string:             ## домашка но в цикле for
+        result = int(desytki+edinitsi)
+        print(result, end=' ')
 
 
 
