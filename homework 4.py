@@ -42,7 +42,7 @@ for s in range(1, strings + 1):
                 print(' ', end=' ')
     print()
 
-#
+# '''
 strings = 7
 for s in range(1, strings + 1):
     for space in range(1, strings - s + 1):
@@ -59,14 +59,14 @@ for i in range(strings - 1, 0, -1):
     for star in range(1, 2 * i):
         if star == 1 or star == i * 2 - 1:
             print('*', end=' ')
-        else:
-            print(' ', end=' ')
     else:
         if i == (strings * 2):
-            print(' ' * strings + '*')
+            print(' ' * strings + '*', end=' ')
         else:
-            print(' ' * (i - strings) + '*', end='')
+            print(' ' * (i - strings) + '*', end=' ')
     print()
+
+
 #
 
 
