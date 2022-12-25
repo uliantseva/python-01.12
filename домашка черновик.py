@@ -1,15 +1,8 @@
-
-
-my_string = '0123456789'
-i = 0
-while i < 100:
-    print(i, end=' : ')
-    i += 1
-
-
-
-
-
-
-
+import random
+li = [random.randint(1, 1000) for i in range(15)]
+for my_result in range():
+    if my_result > 100:
+        print(my_result, end=' ')
+    else:
+        print(' ', end=' ')
 
