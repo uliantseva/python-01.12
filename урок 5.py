@@ -59,7 +59,21 @@ for h in range(count_of_strings):
 columns=5
 strings=5
 for s in range(strings):
-     for c in range(s + 1):
-         print('*', end=' ')
-     print()
+    for c in range(s + 1):
+        print('*', end=' ')
+print()
+
+
+
+# D
+h = int(input('Высота: '))
+for i in range(2 * h + 1):
+    if i <= h:
+        print(' ' * (h - i) + '*' * (i + 1) + '*' * i)
+    else:
+        if i == (h * 2):
+            print(' ' * h + '*')
+        else:
+            print(' ' * (i - h) + '*', end='')
+            print(' ' * (2 * h - i - 1) + '*' + ' ' * (2 * h - i - 1) + '*')
 
