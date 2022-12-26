@@ -44,4 +44,16 @@ tu3 = tuple('apple')
 print(tu)
 print(tu2)
 print(tu3)
+tu4 = (1, 2, 3, ['a', 'b', 'c'])
+tu4[3][1] = 999
+print(tu4)
+
+
+li = list(tu)
+print(type(li), li)
+
+
+
+
+
 
