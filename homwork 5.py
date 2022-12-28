@@ -7,5 +7,11 @@ my_list = [randint(100, 500) for h in range(10)]
 my_results = my_list
 print('my_results', my_results)
 
-
-
+###
+my_list = [1, 2, 3, 4, 5]
+if len(my_list) >= 2:
+    my_list.append(my_list[-1] + my_list[-2])
+else:
+    my_list.append(0)
+print(my_list)
+print(sum(my_list[-2:]))
