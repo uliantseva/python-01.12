@@ -10,6 +10,7 @@ print('my_results', my_results)
 ## 2 вариант второй задачи, подскажите какой вариант правильнее
 # и тот и тот выводит числа больше 100!?
 my_list = [randint(1, 500) for k in range(10)]
+my_results = 0
 for index, i in enumerate(my_list):
     if i > 100:
         my_results[index] = round(my_list[index])
