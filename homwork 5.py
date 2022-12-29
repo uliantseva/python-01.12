@@ -4,9 +4,15 @@ my_list = [randint(100, 1000) for i in range(20)]
 print('my_list', my_list)
 
 ### 2
-my_list = [randint(100, 500) for h in range(10)]
-my_results = my_list
-print('my_results', my_results)
+from random import randint
+my_list = [randint(1, 500) for i in range(20)]
+my_result = []
+for i in my_list:
+    if i > 100:
+        my_result.append(i)
+for i in my_result:
+    print(i, end=' ')
+
 
 
 ### 3
