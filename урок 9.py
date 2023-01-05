@@ -1,22 +1,21 @@
-'''
-словарь = {ключ : значение} - ключ является неизменным объектом
-'''
 
-my_dict = {'key' : 'value'}
-print(my_dict, type(my_dict))
-##
-address = {
-           'city': 'kiev',
-           'street': 'lesya kurbasa',
-           'house': 25,
-           'apartment': 33,
-           14: 'четырнадцать'
+from random import randint
+cube_dict = {
+    1:'one',
+    2: 'two',
+    3: 'three',
+    4: 'four',
+    5: 'five',
+    6: 'six'
 }
-person = {
-    'name': 'volodimir',
-    'age': 42,
-    'address': address,
-}
-print(person)
-print(person['name'])
-print(person['address']['street'])
+value = randint(1, 100)
+print(value)
+result = cube_dict[value % 6 + 1]
+print(f'результат броска кубика {result}')
+a = 9
+di = {'key': a}
+print(di)
+a = 3
+print(di)
+di['key'] = 3
+print(di)
