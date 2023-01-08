@@ -1,3 +1,4 @@
+# 1
 strings = 7
 for s in range(1, strings + 1):
     for space in range(strings * 2 - s * 2):
@@ -5,29 +6,7 @@ for s in range(1, strings + 1):
     for star in range(s * 2 - 1):
         print('*', end=' ')
     print()
-#
-
-strings = 7
-for s in range(1, strings + 1):
-    for space in range(1, strings - s + 1):
-        print(end='  ')
-    for star in range(1, 2 * s):
-        if star == 1 or star == s * 2 - 1:
-            print('*', end=' ')
-        else:
-            print('*', end=' ')
-    print()
-for i in range(strings - 1, 0, -1):
-    for j in range(1, strings - i + 1):
-        print(' ', end=' ')
-    for star in range(1, 2 * i):
-        if star == 1 or star == i * 2 - 1:
-            print('*', end=' ')
-        else:
-            print(' ', end=' ')
-    print()
-#
-
+# 2
 strings = 7
 for s in range(1, strings + 1):
     for space in range(strings * 2 - s * 2):
@@ -41,31 +20,40 @@ for s in range(1, strings + 1):
             else:
                 print(' ', end=' ')
     print()
-
-# '''
+# 3
 strings = 7
-for s in range(1, strings + 1):
-    for space in range(1, strings - s + 1):
-        print(end='  ')
-    for star in range(1, 2 * s):
-        if star == 1 or star == s * 2 - 1:
-            print('*', end=' ')
-        else:
-            print('*', end=' ')
-    print()
-for i in range(strings - 1, 0, -1):
-    for j in range(1, strings - i + 1):
-        print(' ', end=' ')
-    for star in range(1, 2 * i):
-        if star == 1 or star == i * 2 - 1:
-            print('*', end=' ')
+count = -1
+for s in range(1, strings * 2):
+    print(s, end=' ->\t')
+    if s < strings + 1:
+        count += 2
     else:
-        if i == (strings * 2):
-            print(' ' * strings + '*', end=' ')
+        count -= 2
+    for space in range(count, strings * 2 - 1):
+        print(' ', end='')
+    for star in range(count):
+        if s <= strings or star == 0 or star == count - 1:
+            print('*', end=' ')
         else:
-            print(' ' * (i - strings) + '*', end=' ')
+            print(' ', end=' ')
     print()
-
+# 3
+strings = 7
+count = -1
+for s in range(1, strings * 2):
+    print(s, end=' ->\t')
+    if s < strings + 1:
+        count += 2
+    else:
+        count -= 2
+    for space in range(count, strings * 2 - 1):
+        print(' ', end='')
+    for star in range(count):
+        if s <= strings or star == 0 or star == count - 1 or star == count // 2:
+            print('*', end=' ')
+        else:
+            print(' ', end=' ')
+    print()
 
 #
 

@@ -23,6 +23,7 @@ while num % 10 == 0:
     num //= 10
 print('option1', count_zero)
 #
+num = 102024000
 option2 = num
 count_zero = 0
 for sym in str(num)[::-1]:
@@ -32,6 +33,7 @@ for sym in str(num)[::-1]:
         break
 print('option2', count_zero)
 #
+num = 102024000
 option3 = num
 count_zero = 0
 for index in range(len(str(option3))-1, 0, -1):
@@ -41,6 +43,7 @@ for index in range(len(str(option3))-1, 0, -1):
         break
 print('option3', count_zero)
 ## python style
+num = 102024000
 option4 = num
 print('len(str(option4)', len(str(option4)))  # узнал кол-во цифр получив строку
 print('str(option4)[::-1]', str(option4)[::-1])  # переворот числа превращенного в строку

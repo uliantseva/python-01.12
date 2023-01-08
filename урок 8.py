@@ -11,7 +11,7 @@ new_list = my_list.copy() ##
 new_list.append(new_list.pop(0))
 
 new_list = []
-for index in range(1,len(my_list)):
+for index in range(1, len(my_list)):
     new_list.append(my_list[index])
 new_list.append(my_list[0])
 
@@ -35,4 +35,5 @@ for symbol in my_str:
         result_str += symbol
     else:
         result_str += ' '
-print(sum(int(number) for number in result))
+print(sum(int(number) for number in result_str))
+

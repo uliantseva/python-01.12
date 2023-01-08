@@ -9,7 +9,7 @@ my_list2 = []
 my_list3 = [1, 2, 3, 'Vasa', 3.2, my_list]
 my_list4 = 'Vasa'
 s = 'Vasa asdf asdf asdf sdfvc sdef'
-my_list5 = s.split()
+my_list5 = s.split()  ## разделитель
 print('my_list ->', my_list)
 print('my_list2 ->', my_list2)
 print('my_list3 ->', my_list3)
