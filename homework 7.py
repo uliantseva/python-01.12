@@ -36,7 +36,6 @@ for key in sorted(my_dict.keys() & my_dict_2.keys()):
 print('li', li)
 
 # б)
-li_2 = []
 li_2 = [key for key in my_dict if key not in my_dict_2]
 print('li_2', li_2)
 
