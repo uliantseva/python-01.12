@@ -1,5 +1,4 @@
 # 1
-## а), б)
 persons = [
     {'name': 'John', 'age': 15},
     {'name': 'Katya', 'age': 24},
@@ -8,6 +7,7 @@ persons = [
 ]
 print('persons', persons)
 
+# а)
 age_min = persons[0]['age']
 long_name = len(persons)
 for person in persons:
@@ -15,8 +15,10 @@ for person in persons:
         age_min = person['age']
 print('age_min', age_min)
 
+# б)
 names_max_len = [person['name'] for person in persons if len(person['name']) > long_name]
 print('names_max_len', names_max_len)
+
 # с)
 #average = []
 #for i in persons:
