@@ -11,18 +11,12 @@ long_name = len(persons)
 for person in persons:
     if person['age'] < age_min:
         age_min = person['age']
-print('age_min', age_min)
-for name in persons:
-    if len(name['name']) > long_name:
-        long_name = len(name['name'])
-print('long_name', long_name)
+print(age_min)
+names_max_len = [person['name'] for person in persons if len(person['name']) > long_name]
+print(names_max_len)
 # с
-count = 0
-for age in persons:
-    sum_age = sum('age')
-    count += 1
-average = sum_age / count
-print('The average of all the persons is:', average)
+
+
 
 
 
