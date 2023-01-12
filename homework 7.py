@@ -20,10 +20,14 @@ names_max_len = [person['name'] for person in persons if len(person['name']) > l
 print('names_max_len', names_max_len)
 
 # с)
-#average = []
-#for i in persons:
-#    sum_age = int(sum('age'))
-#    print(sum_age)
+names_ages = [(person['name'], person['age']) for person in persons]
+print(names_ages)
+sum_ages = 0
+for person in persons:
+    sum_ages = sum_ages + person['age']
+average = sum_ages / len(persons)
+print('average', average)
+
 
 # 2
 my_dict = {1: 2, 2: 4, 3: 9, 4: 16, 5: 25, 6: 36, 7: 49}
