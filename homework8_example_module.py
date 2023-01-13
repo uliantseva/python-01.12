@@ -1,4 +1,4 @@
-my_list = (1, 2,3, 4, 5)
+my_list = ['as', 'fg', 'tg', 'hy', 'ad']
 
 if __name__ == '__main__':
     print('Эта программа запущена сама по себе.')
@@ -8,8 +8,8 @@ else:
 def fun() -> None:
     """
     Тестируем модули
-    fun Hello!
+    fun name
     :return: None
     """
-    print('Hello!')
+    print('name')
 
