@@ -19,9 +19,11 @@ for index in range(len(li)):
     else:
         new_list.append(li[index])
 print('new_list', new_list)
+
 # 2
 my_letters = [letter for letter in li if letter.lower().startswith('a')]
 print('my_letters', my_letters)
+
 # 3
 new_letters = [new_letter for new_letter in li if 'a' in new_letter]
 print('new_letters', new_letters)
@@ -60,21 +62,19 @@ fun_names(my_str='asdfdf')
 # 6
 def names(str_1, str_2='cap'):
     """
-    str_1 = 'asdgjkl'
-    str_2 = 'asdfdfg'
+    str_1 = 'asdjklm'
+    str_2 = 'asdfdfm'
     :param str_1:
     :param str_2:
     :return:
     """
     print(str_1, str_2)
-    result = []
-    for i in str_1:
-        k = str_1.find(i) + str_1.rfind(i)
-        if k == 0:
-            if i in str_2 and str_2.find(i) + str_2.rfind(i) == 0:
-                print(i)
-                result.append(i)
-names(str_1 = 'asdgjkl', str_2 = 'asdfdfg')
+    result = [element for element in str_1 if element in str_2]
+    print('result', result)
+names(str_1='asdjklm', str_2='asdfdfm')
+
+
+
 # 7
 def names(str_3, str_4='cap'):
     """
@@ -85,14 +85,12 @@ def names(str_3, str_4='cap'):
     :return:
     """
     print(str_3, str_4)
-    result = []
     for i in str_3:
         k = str_3.find(i) - str_3.rfind(i)
         if k == 0:
             if i in str_4 and str_4.find(i) - str_4.rfind(i) == 0:
                 print(i)
-                result.append(i)
-names(str_3 = 'asdfasg', str_4 = 'asdfdfg')
+names(str_3='asdfasg', str_4='asdfdfg')
 
 
 
