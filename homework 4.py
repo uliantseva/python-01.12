@@ -59,8 +59,8 @@ for s in range(1, strings * 2):
 
 
 my_string = '0123456789'
-i = 0
-while i < 100:
-    print(i, end=' : ')
-    i += 1
+for k in my_string:
+    for i in my_string:
+        result = int(k+i)
+        print(result, end=' : ')
 

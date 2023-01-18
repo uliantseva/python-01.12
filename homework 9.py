@@ -1,4 +1,15 @@
-# London is the capital of Great Britain. It is situated on the Thames.
-# It is a large industrial and cultural centre.
-# It population is about 9 million people.
-# The Thames dividesLondon into two parts: the West End and the East End.
+def censor(filename:str):
+    with open(filename, 'rt') as file:
+        data = file.read()
+        return data
+count = 0
+text = censor('files/London.txt')
+for i in censor:
+
+
+
+
+
+
+
+
