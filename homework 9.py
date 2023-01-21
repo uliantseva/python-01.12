@@ -1,25 +1,36 @@
 # 1
-def censor(filename: str):
+def censor(filename: str, list_words):
+
+    """
+    list_words = ['London', 'Parliament', 'city']
+    filename: "files/London.txt"
+    :param filename:
+    :param list_words:
+    :return:
+    """
+
     with open(filename, 'rt') as file:
-        data = file.read()
-        return data
-li = ['London', 'Parliament', 'city']
-text = censor("files/London.txt")
-text = text.replace("London", "*" * len("London"))
-text = text.replace("Parliament", "*" * len("Parliament"))
-text = text.replace("city", "*" * len("city"))
-with open("files/London.txt", "wt") as file:
-    file.write(text)
-print(text)
+        text = file.read()
+        print(text)
+        for word in list_words:
+            text = text.replace(word, '*' * len(word))
+    with open("files/London 3.txt", "wt") as file:
+        file.write(text)
+censor("files/London.txt", ['London', 'Parliament', 'city'])
 
 # 2
 def fun_words(filename: str):
+    """
+    filename: "files/London.txt"
+    :param filename:
+    :return:
+    """
     with open(filename, 'rt') as file:
+        text = file.read()
         vocabulary = file.read()
         return vocabulary
-text = fun_words("files/London 2.txt")
-result = len(text.split())
-print(result)
+        result = len(text.split())
+        print(result)
 
 
 
