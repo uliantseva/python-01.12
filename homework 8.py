@@ -1,7 +1,3 @@
-import homework8_example_module
-homework8_example_module.fun()
-print('homework8_example_module.my_list', homework8_example_module.my_list)
-
 
 # 1
 def function():
@@ -18,6 +14,7 @@ for index in range(len(li)):
         new_list.append(li[index][::-1])
     else:
         new_list.append(li[index])
+
 print('new_list', new_list)
 
 # 2
