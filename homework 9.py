@@ -11,39 +11,34 @@ def censor(filename: str, list_words):
 
     with open(filename, 'rt') as file:
         text = file.read()
-        print(text)
+
         for word in list_words:
             text = text.replace(word, '*' * len(word))
+        print(text)
     with open("files/London 3.txt", "wt") as file:
         file.write(text)
 censor("files/London.txt", ['London', 'Parliament', 'city'])
 
 # 2
-def fun_words_count(filename: str):
+def words_count(filename):
     """
-    fun_words_count
-    :param filename:
+    words_count
+    :param filename: "files/London.txt"
     :return:
     """
     with open(filename, 'rt') as file:
         text = file.read()
-        print(text)
-    words_dict = dict()
-    text = ("files/London.txt")
-    text = text.replace("\n", " ")
-    text = text.replace(",", "").replace(".", "").replace(":", "").replace("'", "")
-    text = text.casefold()
-    text = text.lower()
-    words = text.split()
-    words.sort()
-    print(words)
-    print(f"Кол-во слов: {len(words)}")
-    for word in words:
-        if word in words_dict:
-            words_dict[word] = words_dict[word] + 1
+    word_count = {}
+
+    for word in text.split():
+        word = word.lower().strip('\n').replace(",", "").replace(".", "").replace(":", "").replace("'", "").replace("\n", " ")
+        if word in word_count:
+            word_count[word] += 1
         else:
-            words_dict[word] = 1
-    return words_dict
+            word_count[word] = 1
+    return word_count
+
+print(words_count("files/London.txt"))
 
 
 
