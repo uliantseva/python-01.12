@@ -1,5 +1,5 @@
 import homework_module
-print(homework_module.my_list)
+print('\n', homework_module.my_list)
 import homework_module as h_w_mod
 h_w_mod.string_list()
 
@@ -10,20 +10,20 @@ for index in range(len(h_w_mod.my_list)):
         new_list.append(h_w_mod.my_list[index][::-1])
     else:
         new_list.append(h_w_mod.my_list[index])
-print('new_list', new_list)
+print('\n', 'new_list', new_list)
 
 # 2
 my_letters = [letter for letter in h_w_mod.my_list if letter.lower().startswith('a')]
-print('my_letters', my_letters)
+print('\n', 'my_letters', my_letters)
 
 # 3
 new_letters = [new_letter for new_letter in h_w_mod.my_list if 'a' in new_letter]
-print('new_letters', new_letters)
+print('\n', 'new_letters', new_letters)
 
 
 
 from homework_module import my_list_2
-print(my_list_2)
+print('\n', my_list_2)
 
 # 4
 result = []
@@ -34,7 +34,7 @@ print('result', result)
 
 # 5
 from homework_module import my_str
-print(my_str)
+print('\n', my_str)
 
 my_set = set(my_str)
 lst = []
@@ -45,16 +45,16 @@ print('lst', lst)
 
 # 6
 from homework_module import str_1, str_2
-print(str_1)
-print(str_2)
+print('\n', str_1)
+print('\n', str_2)
 
 result = [element for element in str_1 if element in str_2]
 print('result', result)
 
 # 7
 from homework_module import str_3, str_4
-print(str_3)
-print(str_4)
+print('\n', str_3)
+print('\n', str_4)
 
 for i in str_3:
     k = str_3.find(i) - str_3.rfind(i)
