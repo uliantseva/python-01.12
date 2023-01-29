@@ -59,8 +59,6 @@ def censor_csv(filename: str):
             word_count[word] = 1
     print(word_count)
 
-    for word in word_count:
-        stat[word] = text.count(word)
 
     with open("files/London.stat.csv", 'wt') as file:
         writer = csv.writer(file)
