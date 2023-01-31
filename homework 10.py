@@ -14,6 +14,7 @@ def censor(filename: str, list_words):
         text = text.replace(word, '*' * len(word))
     with open("files/London 3.txt", "wt") as file:
         file.write(text)
+    print(text)
 censor("files/London.txt", ['London', 'Parliament', 'capital'])
 def dict_words_count(filename: str):
     """
@@ -21,7 +22,6 @@ def dict_words_count(filename: str):
     :param filename: "files/London.txt"
     :return:
     """
-    #stat = {"filename": filename, "words": [], "word_count": {}}
     with open(filename, 'rt') as file:
         text = file.read()
     dict_words = {}
@@ -33,8 +33,11 @@ def dict_words_count(filename: str):
         else:
             dict_words[word] = 1
     #print(dict_words)
+    #stat = {"filename": filename, "words": [], "dict_words": {}}
     with open("files/London.stat.json", 'w') as file:
         json.dump(dict_words, file)
+    #with open("files/London.stat.json", 'w') as file:
+        #json.dump(stat, file)
     return dict_words
 def from_dict_to_list(my_dict: dict) -> list:
     """
@@ -52,18 +55,18 @@ my_di = dict_words_count("files/London.txt")
 print(my_di)
 print('-----------------')
 from_dict_to_list(my_di)
-
-def censor_csv_stat(filename: str,stat,  my_di):
+def create_csv_stat(my_di):
     """
-    filename:
     my_di
-    :param
+    :param my_di:
     :return:
     """
-    #stat = {"filename": filename, "words": [], "word_count": {}}
     with open("files/London.stat.csv", 'wt') as file:
         writer = csv.writer(file)
         writer.writerow(my_di)
-        for word, count in stat.items():
-            writer.writerow([word, count])
-    return word, count
+    for word, count in my_di.items():
+        writer.writerow([word, count])
+
+
+
+
