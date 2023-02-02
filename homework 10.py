@@ -24,21 +24,17 @@ def dict_words_count(filename: str):
     """
     with open(filename, 'rt') as file:
         text = file.read()
-    dict_words = {}
+    stat_dict_words = {}
     for word in text.split():
         word = word.lower().strip('\n').replace(",", "").replace(".", "").replace(":", "").replace("'", "").replace(
             "\n", " ")
-        if word in dict_words:
-            dict_words[word] += 1
+        if word in stat_dict_words:
+            stat_dict_words[word] += 1
         else:
-            dict_words[word] = 1
-    #print(dict_words)
-    #stat = {"filename": filename, "words": [], "dict_words": {}}
+            stat_dict_words[word] = 1
     with open("files/London.stat.json", 'w') as file:
-        json.dump(dict_words, file)
-    #with open("files/London.stat.json", 'w') as file:
-        #json.dump(stat, file)
-    return dict_words
+        json.dump(stat_dict_words, file,  indent=4)
+    return stat_dict_words
 def from_dict_to_list(my_dict: dict) -> list:
     """
     from_dict_to_list
@@ -49,23 +45,16 @@ def from_dict_to_list(my_dict: dict) -> list:
     for word, count in my_dict.items():
         result.append({'word': word, 'count': count})
     print(result)
+    with open("files/London.stat.csv", 'wt') as file:
+        writer = csv.writer(file, delimiter='\n')
+        writer.writerow(result)
     return result
 my_di = dict_words_count("files/London.txt")
-#print('-----------------')
+print('-----------------')
 print(my_di)
 print('-----------------')
 from_dict_to_list(my_di)
-def create_csv_stat(my_di):
-    """
-    my_di
-    :param my_di:
-    :return:
-    """
-    with open("files/London.stat.csv", 'wt') as file:
-        writer = csv.writer(file)
-        writer.writerow(my_di)
-    for word, count in my_di.items():
-        writer.writerow([word, count])
+
 
 
 
