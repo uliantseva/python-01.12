@@ -1,41 +1,33 @@
-import json
-import csv
+class Employee:
+    """Создаем класс Employee"""
 
-def censor(filename: str, list_words):
-    """
-    list_words = ['London', 'Parliament', 'city']
-    filename: "files/London.txt"
-    :param filename:
-    :param list_words:
-    :return:
-    """
-    with open(filename, 'rt') as file:
-        text = file.read()
+    def __init__(self, firstname: str, lastname: str,  age: int, email: str, skills: list,
+                 people_lang: list, coding_lang: list):
+        self.firstname = firstname
+        self.lastname = lastname
+        self.age = age
+        self.email = email
+        self.skills = skills
+        self.people_lang = people_lang
+        self.coding_lang = coding_lang
 
-        word_count = {}
-        for word in text.split():
-            word = word.lower().strip('\n').replace(",", "").replace(".", "").replace(":", "").replace("'", "").replace(
-                "\n", " ")
-            if word in word_count:
-                word_count[word] += 1
-            else:
-                word_count[word] = 1
-        print(word_count)
+    def save_data_to_file(self, filename):
+        with open(filename, 'w') as file:
+            file.write(f"Name: {self.firstname} {self.lastname}\n")
+            file.write(f"Age: {self.age}\n")
+            file.write(f"Email: {self.email}\n")
+            file.write(f"Skills: {', '.join(self.skills)}\n")
+            file.write(f"Languages: {', '.join(self.people_lang)}, {', '.join(self.coding_lang)}\n")
 
-    for word in list_words:
-        text = text.replace(word, '*' * len(word))
-    print('\n', text)
-    with open("files/London 3.txt", "wt") as file:
-        file.write(text)
-
-    with open("files/London.stat.json", 'w') as file:
-        json.dump(word_count, file)
-
-    stat = {}
-    with open("files/London.stat.csv", 'wt') as file:
-        writer = csv.writer(file)
-        writer.writerow(word_count)
-        for word, count in stat.items():
-            writer.writerow([word, count])
-
-censor("files/London.txt", ['London', 'Parliament', 'city'])
+obj = Employee('Ivasik', 'Telesik', 13, 'ivasik-telesik1732@izkurnanog.ua',
+               ["ходить", "говорить", "кодить"],
+               ["Україньська", "Англійська"],
+               ["Python", "C++", "lisp"])
+print(obj.firstname, obj.lastname)
+print(obj.age)
+print(obj.email)
+print(obj.skills)
+print(obj.people_lang)
+print(obj.coding_lang)
+obj.save_data_to_file("files/Employee.json")
+obj.save_data_to_file("files/Employee.csv")
