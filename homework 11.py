@@ -31,12 +31,6 @@ class Employee:
         print(data_dict)
         return data_dict
 
-    def create_obj_from_file(self, filename):
-        with open(filename, 'r') as file:
-            data = file.read()
-
-
-
 
 obj = Employee('Ivasik', 'Telesik', 13, 'ivasik-telesik1732@izkurnanog.ua',
                ["ходить", "говорить", "кодить"],
