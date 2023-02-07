@@ -1,5 +1,7 @@
 import os
-path = r'files'
+#path = r'C:\Users\Lexx1488\PycharmProjects\pythonProject_28\python-01.12/files'
+#data = os.listdir(path)
+#print(r'C:\Users\Lexx1488\PycharmProjects\pythonProject_28\python-01.12/files', os.listdir())
 #path = r'C:\Users\Lexx1488\PycharmProjects\pythonProject_28\python-01.12/files'
 
 #print(os.path.join('папка', 'файл'))
@@ -19,28 +21,37 @@ class Directory:
     def __init__(self, directory_name):
         self. directory_name = directory_name
 #2
-    def get_attributes_dic(self):
+    def get_dic(self):
         """
         метод класса, который создает атрибут класса в ввиде словаря
         :return:
         """
-        dir_list = os.listdir(self. directory_name)
-        files_list = []
-        dirs_list = []
-        for item in dir_list:
-            if os.path.isfile(os.path.join(self. directory_name, item)):
-                files_list.append(item)
-            elif os.path.isdir(os.path.join(self. directory_name, item)):
-                dirs_list.append(item)
-                print(dirs_list)
-                self.dir_attributes = {'filenames': files_list, 'dirnames': dirs_list}
-                print(self.dir_attributes)
-                print("filenames:", "dirnames:")
+        dirs, files = list(), list()
+        for item in os.listdir(self.directory_name):
+            if os.path.isdir(os.path.join(self.directory_name, item)):
+                dirs.append(item)
+            else:
+                files.append(item)
+        self.listing = {'filenames': files, 'dirnames': dirs}
+        return self.listing
+#3
+    def get_new_dic(self, dict):
+        dir_list = dict['dirs']
+        file_list = dict['files']
+        if self.directory_name:
+            dir_list.sort()
+            file_list.sort()
+        else:
+            dir_list.sort(reverse=True)
+            file_list.sort(reverse=True)
+        dict['dir'] = dir_list
+        dict['files'] = file_list
+        print(dict)
+        return dict
 
-obj=Directory('все файлы')
-
-obj.get_attributes_dic()
-
+obj = Directory(r'C:\Users\Lexx1488\PycharmProjects\pythonProject_28\python-01.12/files')
+print(obj.get_dic())
+obj.get_new_dic(dict)
 
 
 
