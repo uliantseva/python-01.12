@@ -29,16 +29,17 @@ class Directory:
 #4
     def get_string(self, string):
         if '.' in string:
-            self.directory_name['filenames'].append(string)
+            self.listing['filenames'].append(string)
         else:
-            self.directory_name['dirnames'].append(string)
-        return self.directory_name
-
+            self.listing['dirnames'].append(string)
+        return self.listing
 
 obj = Directory(r'C:\Users\Lexx1488\PycharmProjects\pythonProject_28\python-01.12/files')
 print(obj.create_dic())
 print(obj.sort_dict())
-print(obj.get_string('files'))
+print(obj.get_string('File.one'))
+print(obj.get_string('Folder'))
+
 
 
 
