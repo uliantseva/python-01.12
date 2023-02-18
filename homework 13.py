@@ -80,16 +80,9 @@ class Family(Person):
     @address.setter
     def address(self, address: str):
         self.__address = address
-    def get_dict(self):
-        new_data_dict = {}
-        new_data_dict['mom'] = self.firstname, self.lastname, self.age, self.address
-        new_data_dict['dad'] = self.firstname, self.lastname, self.age, self.address
-        new_data_dict['child'] = self.firstname, self.lastname, self.age, self.address
-        new_data_dict['grandma'] = self.firstname, self.lastname, self.age, self.address
-        return new_data_dict
-    def create_dict_(self, new_data_dict):
+    def create_dict_(self, data_dict):
         result = []
-        for key, value in new_data_dict.items():
+        for key, value in data_dict.items():
             result.append({'key': key, 'value': value})
         return result
 
@@ -101,7 +94,6 @@ print(obj.mom)
 print(obj.dad)
 print(obj.child)
 print(obj.grandma)
-obj.get_dict()
 obj.create_dict_({'mom': 'Алла Давиденко, 40, ул. Матросова 90', 'dad': 'Олег Давиденко, 41, ул. Матросова 90',
                   'child': 'Антон Давиденко, 12, ул. Матросова 90', 'grandma': 'Тамара Давиденко, 63, ул. Матросова 90'})
 print(obj.create_dict_({'mom': 'Алла Давиденко, 40, ул. Матросова 90', 'dad': 'Олег Давиденко, 41, ул. Матросова 90',
