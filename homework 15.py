@@ -22,3 +22,4 @@ def instagram_credentials():
 
 bank_credentials()
 instagram_credentials()
+
