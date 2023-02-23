@@ -2,17 +2,19 @@ class Transport:
     """
     Класс описывающий транспорт
     """
-    def __init__(self, gov_number: str, number_of_wheels: int, power: int, max_speed: int):
-        self.__gov_number = gov_number
-        self.__number_of_wheels = number_of_wheels
+    def __init__(self, state_num: str, num_wheels: int, power: int, max_speed: int):
+        self.__state_num = state_num
+        self.__num_wheels = num_wheels
         self.__power = power
         self.__max_speed = max_speed
+    def make_move(self):
+        print("Транспортно средство движется\n")
     @property
-    def gov_number(self):
-        return self.__gov_number
+    def state_num(self):
+        return self.__state_num
     @property
-    def number_of_wheels(self):
-        return self.__number_of_wheels
+    def num_wheels(self):
+        return self.__num_wheels
     @property
     def power(self):
         return self.__power
@@ -21,12 +23,12 @@ class Transport:
         return self.__max_speed
 
     def __str__(self):
-        return f'государственный номер: {self.__gov_number}\nколичество колес: {self.__number_of_wheels}\n' \
+        return f'государственный номер: {self.__state_num}\nколичество колес: {self.__num_wheels}\n' \
                f'мощность двигателя: {self.__power}\nмаксимальная скорость: {self.__max_speed}\n'
 
-obj = Transport('1Q2EA', 4, 1000, 150)
-print(obj)
-
+transport_obj = Transport('1Q2EA', 4, 1000, 150)
+print(transport_obj)
+transport_obj.make_move()
 class Bike(Transport):
     """
     Описание подкласса
