@@ -12,7 +12,10 @@ class Transport:
         self.__power = power
         self.__max_speed = max_speed
     def drive(self):
-        print(f'Транспортное средство движется\n')
+        return f'Транспортное средство движется'
+    @property
+    def drive_(self):
+        return self.drive()
     @property
     def state_num(self):
         return self.__state_num
@@ -26,12 +29,13 @@ class Transport:
     def max_speed(self):
         return self.__max_speed
     def __str__(self):
-        return f'государственный номер: {self.__state_num}\nколичество колес: {self.__num_wheels}\n' \
+        return f'\nгосударственный номер: {self.__state_num}\nколичество колес: {self.__num_wheels}\n' \
                f'мощность двигателя: {self.__power}\nмаксимальная скорость: {self.__max_speed}\n'
 
 transport_obj = Transport('1Q2EA', 4, 1000, 180)
 print(transport_obj)
 transport_obj.drive()
+print(transport_obj.drive())
 
 class Bike(Transport):
     """
@@ -44,14 +48,15 @@ class Bike(Transport):
     def num_of_pedals(self):
         return self.__num_of_pedals
     def drive_bike(self):
-        super().drive()
-        print(f' на {self.__num_of_pedals} колесах\n')
+        return super().drive() + f' на {self.__num_of_pedals} колесах\n'
     def __str__(self):
         return super().__str__() + f'количество педалей: {self.__num_of_pedals}\n'
 
 bike_obj = Bike('RG456S', 2, 400, 200, 2)
 print(bike_obj)
 bike_obj.drive_bike()
+print(bike_obj.drive_bike())
+
 class Car(Transport):
     """
     Подкласс описывающий легковую машину
@@ -134,9 +139,9 @@ class Truck(Car):
             print(f'Загрузить {cargo} тонны груза')
             self.__carrying -= cargo
         else:
-            print(f'Не может загрузить {cargo} тонны груза, остались только {self.__carrying} тонны')
+            print(f'Не может загрузить {cargo} тонн груза, осталось только {self.__carrying} тонн')
     def __str__(self):
-        return super().__str__() + f'тонны груза: {self.__carrying}\n'
+        return super().__str__() + f'тонн груза: {self.__carrying}\n'
 truck_obj = Truck('2K34HJU', 4, 1000, 150, 200, 0, 500)
 print(truck_obj)
 truck_obj.load_cargo(1000)
